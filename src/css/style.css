@@ -20,8 +20,8 @@ div.instrument {
 	overflow: initial;
 	width: 159px;
 	height: 159px;
-	top: 259px;
-	left: 192px;
+	top: 249px;
+	left: 182px;
 	z-index: 1;
 }
 
@@ -63,8 +63,8 @@ div.instrument {
 	display: block;
 	overflow: initial;
 	width: 320px;
-	top: 20px;
-	left: 760px;
+	top: 10px;
+	left: 750px;
 }
 
 #warning-lights {
@@ -83,22 +83,22 @@ div.instrument {
 
 #attitude {
 	top: 54px;
-	left: 172px;
+	left: 163px;
 }
 
 #altimeter {
 	top: 54px;
-	left: 335px;
+	left: 330px;
 }
 
 #turn_coordinator {
-	top: 240px;
-	left: 5px;
+	top: 230px;
+	left: -5px;
 }
 
 #variometer {
-	top: 240px;
-	left: 335px;
+	top: 230px;
+	left: 325px;
 }
 
 #flap-control {
@@ -134,8 +134,8 @@ div.instrument {
 	overflow: initial;
 	width: 160px;
 	height: 160px;
-	top: 460px;
-	left: 360px;
+	top: 450px;
+	left: 350px;
 }
 
 #tachometer>img {
@@ -156,16 +156,16 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 140px;
-	height: 140px;
-	top: 680px;
-	left: 650px;
+	top: 650px;
+	left: 450px;
 }
 
 #throttle>img {
 	position: absolute;
 	display: block;
 	overflow: initial;
+	width: 180px;
+	height: 180px;
 }
 
 #throttle>#base {
@@ -180,16 +180,16 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	top: 680px;
-	left: 775px;
+	top: 650px;
+	left: 590px;
 }
 
 #mixture>img {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 210px;
-	height: 210px;
+	width: 180px;
+	height: 180px;
 }
 
 #mixture>#base {
@@ -235,8 +235,8 @@ div.instrument {
 	overflow: initial;
 	width: 160px;
 	height: 160px;
-	top: 265px;
-	left: 550px;
+	top: 255px;
+	left: 540px;
 }
 
 #single-axis-vor>img {
@@ -277,8 +277,8 @@ div.instrument {
 	overflow: initial;
 	width: 160px;
 	height: 160px;
-	top: 78px;
-	left: 550px;
+	top: 68px;
+	left: 540px;
 }
 
 #two-axis-vor>img {
@@ -342,12 +342,12 @@ div.instrument {
 
 #radio1 {
 	top: 110px;
-	left: 760px;
+	left: 750px;
 }
 
 #radio2 {
 	top: 226px;
-	left: 760px;
+	left: 750px;
 }
 
 .radio>.frequency {

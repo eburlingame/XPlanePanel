@@ -3,7 +3,7 @@ import $ from 'jquery';
 import '../skyhawk/jquery.flightindicators';
 import settings from "./SkyhawkSettings";
 
-class AirspeedIndicator extends Component {
+class VerticalSpeedIndicator extends Component {
 
   	constructor(props) {
 		super(props);
@@ -12,8 +12,8 @@ class AirspeedIndicator extends Component {
 
 	componentDidMount() {
 		let ele = $.flightIndicator(
-							"#airspeed", 
-							"airspeed", 
+							"#variometer", 
+							"variometer", 
 							settings);
 
 		this.setState({ jqueryObj: 	ele });
@@ -21,10 +21,10 @@ class AirspeedIndicator extends Component {
 
 	render() {
 		if (this.state.jqueryObj != null) {
-			this.state.jqueryObj.setAirSpeed(this.props.airspeed);
+			this.state.jqueryObj.setVario(this.props.verticalSpeed);
 		}
-		return <div id="airspeed" className="instrument" />
+		return <div id="variometer" className="instrument" />
 	}
 }
 
-export default AirspeedIndicator;
+export default VerticalSpeedIndicator;

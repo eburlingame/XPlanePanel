@@ -3,7 +3,7 @@ import $ from 'jquery';
 import '../skyhawk/jquery.flightindicators';
 import settings from "./SkyhawkSettings";
 
-class AirspeedIndicator extends Component {
+class AttitudeIndicator extends Component {
 
   	constructor(props) {
 		super(props);
@@ -12,8 +12,8 @@ class AirspeedIndicator extends Component {
 
 	componentDidMount() {
 		let ele = $.flightIndicator(
-							"#airspeed", 
-							"airspeed", 
+							"#attitude", 
+							"attitude", 
 							settings);
 
 		this.setState({ jqueryObj: 	ele });
@@ -21,10 +21,13 @@ class AirspeedIndicator extends Component {
 
 	render() {
 		if (this.state.jqueryObj != null) {
-			this.state.jqueryObj.setAirSpeed(this.props.airspeed);
+			this.state.jqueryObj.setPitch(this.props.pitch);
+			this.state.jqueryObj.setRoll(this.props.roll);
+			this.state.jqueryObj.setOffFlag(this.props.offFlag);
+
 		}
-		return <div id="airspeed" className="instrument" />
+		return <div id="attitude" className="instrument" />
 	}
 }
 
-export default AirspeedIndicator;
+export default AttitudeIndicator;
