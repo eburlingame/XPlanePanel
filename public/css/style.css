@@ -1,0 +1,613 @@
+
+
+img.panel-background {
+	z-index: -1;
+	width: 1080px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+div.instrument {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#heading-indicator {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 159px;
+	height: 159px;
+	top: 259px;
+	left: 192px;
+	z-index: 1;
+}
+
+#heading-indicator>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#heading-indicator>#bug {
+	z-index: 2;
+}
+
+#heading-indicator>#ring {
+	z-index: 3;
+}
+
+#heading-indicator>#bug {
+	z-index: 4;
+}
+
+#heading-indicator>#calib-knob {
+	top: 141.5px;
+	left: 6.8px;
+	width: 18px;
+	z-index: 5;
+}
+
+#heading-indicator>#bug-knob {
+	z-index: 6;
+	top: 141.1px;
+	left: 134.5px;
+	width: 18px;
+	z-index: 5;
+}
+
+#audio-panel {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 320px;
+	top: 20px;
+	left: 760px;
+}
+
+#warning-lights {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 260px;
+	top: 28px;
+	left: 210px;
+}
+
+#airspeed {
+	top: 54px;
+	left: -5px;
+}
+
+#attitude {
+	top: 54px;
+	left: 172px;
+}
+
+#altimeter {
+	top: 54px;
+	left: 335px;
+}
+
+#turn_coordinator {
+	top: 240px;
+	left: 5px;
+}
+
+#variometer {
+	top: 240px;
+	left: 335px;
+}
+
+#flap-control {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 110px;
+	top: 650px;
+	left: 960px;
+}
+
+#flap-control>img {
+	position: absolute;
+	width: 100%;
+}
+
+#flap-control>#background {
+	z-index: 0;
+}
+
+#flap-control>#indicator {
+	z-index: 1;
+}
+
+#flap-control>#lever{
+	z-index: 2;
+}
+
+
+#tachometer {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 160px;
+	height: 160px;
+	top: 460px;
+	left: 360px;
+}
+
+#tachometer>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#tachometer>#base {
+	z-index: 1;
+}
+
+#tachometer>#needle {
+	z-index: 2;
+}
+
+#throttle {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 140px;
+	height: 140px;
+	top: 680px;
+	left: 650px;
+}
+
+#throttle>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#throttle>#base {
+	z-index: 1;
+}
+
+#throttle>#handle {
+	z-index: 2;
+}
+
+#mixture {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	top: 680px;
+	left: 775px;
+}
+
+#mixture>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 210px;
+	height: 210px;
+}
+
+#mixture>#base {
+	z-index: 1;
+}
+
+#mixture>#handle {
+	z-index: 2;
+}
+
+#adf {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 160px;
+	height: 160px;
+	top: 460px;
+	left: 550px;
+}
+
+#adf>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#adf>#base {
+	z-index: 1;
+}
+
+#adf>#arrow {
+	z-index: 2;
+}
+
+#adf>#ring {
+	z-index: 3;
+}
+
+
+#single-axis-vor {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 160px;
+	height: 160px;
+	top: 265px;
+	left: 550px;
+}
+
+#single-axis-vor>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#single-axis-vor>#base {
+	z-index: 1;
+}
+
+#single-axis-vor>#ring {
+	z-index: 2;
+}
+
+#single-axis-vor>#nav-flag {
+	z-index: 3;
+}
+
+#single-axis-vor>#nav-mask {
+	z-index: 4;
+}
+
+#single-axis-vor>#needle {
+	z-index: 5;
+	transform-origin: 50% 18%;
+}
+
+#single-axis-vor>#arrow {
+	z-index: 6;
+}
+
+
+#two-axis-vor {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 160px;
+	height: 160px;
+	top: 78px;
+	left: 550px;
+}
+
+#two-axis-vor>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#two-axis-vor>#base {
+	z-index: 1;
+}
+
+#two-axis-vor>#ring {
+	z-index: 2;
+}
+
+#two-axis-vor>#nav-flag {
+	z-index: 3;
+}
+
+#two-axis-vor>#gs-flag {
+	z-index: 3;
+}
+
+#two-axis-vor>#masks {
+	z-index: 4;
+}
+
+#two-axis-vor>#vert-needle {
+	z-index: 5;
+	transform-origin: 50% 18%;
+}
+
+#two-axis-vor>#horiz-needle {
+	z-index: 5;
+	transform-origin: 18% 50%;
+}
+
+#two-axis-vor>#arrow {
+	z-index: 6;
+}
+
+@font-face {
+	font-family: "Digital7";
+	src: url("../fonts/digital-7.mono.ttf");
+}
+
+@font-face {
+	font-family: "Digital7-italic";
+	src: url("../fonts/digital-7.monoitalic.ttf");
+}
+
+
+.radio {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 320px;
+	z-index: 0;
+}
+
+#radio1 {
+	top: 110px;
+	left: 760px;
+}
+
+#radio2 {
+	top: 226px;
+	left: 760px;
+}
+
+.radio>.frequency {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	font-size: 22px;
+	font-family: "Digital7";
+	color: #f7931dff;
+	z-index: 2;
+}
+
+.radio>#comm-active-frequency {
+	left: 6px;
+	top: 18px;
+}
+
+.radio>#comm-stby-frequency {
+	left: 80px;
+	top: 18px;
+}
+
+.radio>#nav-active-frequency {
+	left: 160px;
+	top: 18px;
+}
+
+.radio>#nav-stby-frequency {
+	left: 235px;
+	top: 18px;
+}
+
+
+.radio>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+.radio>#base {
+	z-index: 0;
+	pointer-events: none;
+}
+
+.radio>#outer-knob {
+	z-index: 1;
+}
+
+.radio>#inner-knob {
+	z-index: 2;
+}
+
+.radio>#comm-button {
+	z-index: 5;
+	top: 65px;
+	left: 65px;
+	width: 17px;
+}
+
+.radio>#nav-button {
+	z-index: 5;
+	top: 65px;
+	left: 220px;
+	width: 17px;
+}
+
+.radio>#comm-volume-knob {
+	z-index: 5;
+	top: 75px;
+	left: 35px;
+	width: 20px;
+}
+
+.radio>#nav-volume-knob {
+	z-index: 5;
+	top: 75px;
+	left: 195px;
+	width: 20px;
+}
+
+.radio>#comm-inner-knob {
+	z-index: 5;
+	top: 65px;
+	left: 128px;
+	width: 20px;
+}
+
+.radio>#comm-outer-knob {
+	z-index: 4;
+	top: 57px;
+	left: 120px;
+	width: 36px;
+}
+
+
+.radio>#nav-inner-knob {
+	z-index: 5;
+	top: 65px;
+	left: 273px;
+	width: 20px;
+}
+
+.radio>#nav-outer-knob {
+	z-index: 4;
+	top: 57px;
+	left: 265px;
+	width: 36px;
+}
+
+#kap140 {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	width: 322px;
+	height: 100px;
+	top: 340px;
+	left: 760px;
+}
+
+#kap140>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
+#kap140>base {
+ 	z-index: 1;
+}
+
+#kap140>.lcd{
+	z-index: 2;
+	border: none;
+	margin: none;
+	padding: none;
+}
+
+#kap140>.button {
+ 	z-index: 2;
+	width: 5.4%;
+}
+
+#kap140>#nav-button {
+	top: 63.3%;
+	left: 32.5%;
+}
+
+#kap140>#ap-button {
+	top: 63.3%;
+	left: 3.6%;
+}
+
+#kap140>#apr-button {
+	top: 63.3%;
+	left: 44.2%;
+}
+
+#kap140>#arm-button {
+	top: 8.4%;
+	left: 80.4%;
+}
+
+#kap140>#baro-button {
+	top: 8.4%;
+	left: 90.3%;
+}
+
+#kap140>#alt-button {
+	top: 63.3%;
+	left: 65.4%;
+}
+
+#kap140>#rev-button {
+	top: 63.3%;
+	left: 55.4%;
+}
+
+#kap140>#up-button {
+	top: 35%;
+	left: 74.2%;
+}
+
+#kap140>#dn-button {
+	top: 60.4%;
+	left: 74.2%;
+}
+
+#kap140>#hdg-button {
+	top: 63.3%;
+	left: 21%;
+}
+
+#kap140>#inner-knob {
+	width: 7%;
+	left: 86%;
+	top: 42.5%;
+	z-index: 3;
+}
+
+#kap140>#outer-knob {
+	width: 13%;
+	z-index: 2;
+	left: 83%;
+	top: 33%;
+}
+
+#kap140>.active-indicator {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	font-size: 20px;
+	font-family: "Digital7-italic";
+	color: #f7931dff;
+	z-index: 2;
+}
+
+#kap140>.armed-indicator {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	font-size: 20px;
+	font-family: "Digital7";
+	color: #f7931dff;
+	z-index: 2;
+}
+
+#kap140>#active-indicator-left {
+	left: 16.6%;
+	top: 10%;
+}
+
+#kap140>#armed-indicator-left {
+	left: 16.5%;
+	top: 26%;
+}
+
+#kap140>#active-indicator-right {
+	left: 35.6%;
+	top: 10%;
+}
+
+#kap140>#armed-indicator-right {
+	left: 35.5%;
+	top: 26%;
+}
+
+#kap140>#altitude {
+	position: absolute;
+	display: block;
+	overflow: initial;
+	font-size: 21px;
+	font-family: "Digital7-italic";
+	color: #f7931dff;
+	z-index: 2;
+	left: 51.2%;
+	top: 11%;
+}
+
+#kap140>#altitude>#comma {
+	font-family: "Digital7";
+	font-stretch: ultra-condensed;
+}
+
+
