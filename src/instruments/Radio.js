@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import {linmap, linmapConstrain, rotate} from '../Helpers';
 
-class DualCourseDeviationIndicator extends Component {
-
+class Radio extends Component {
   	constructor(props) {
 		super(props);
+		this.knobScrolled = this.knobScrolled.bind(this);
+	}
+
+	knobScrolled(e, knob, amount) {
+		e.preventDefault();
 	}
 
 	render() {
@@ -39,23 +43,23 @@ class DualCourseDeviationIndicator extends Component {
 		    	</div>
 
 			    <img id="comm-inner-knob" src="img/radio/radio-inner-knob.svg"
-			           onWheel={(e) => "wheeled!"}
+			           onWheel={(e) => this.knobScrolled(e, 0, 0)}
 			           onClick={(e) => "clicked!"}
-			           onWheel={(e) => "wheeled!"} />
+			           onWheel={(e) => this.knobScrolled(e, 0, 0)} />
 
 			    <img id="comm-outer-knob" src="img/radio/radio-outer-knob.svg"
-			           onWheel={(e) => "wheeled!"}
+			           onWheel={(e) => this.knobScrolled(e, 0, 0)}
 			           onClick={(e) => "clicked!"}
-			           onWheel={(e) => "wheeled!"} />
+			           onWheel={(e) => this.knobScrolled(e, 0, 0)} />
 
 			    <img id="nav-inner-knob" src="img/radio/radio-inner-knob.svg"
-			           onWheel={(e) => "wheeled!"}
+			           onWheel={(e) => this.knobScrolled(e, 0, 0)}
 			           onClick={(e) => "clicked!"}
-			           onWheel={(e) => "wheeled!"} />
+			           onWheel={(e) => this.knobScrolled(e, 0, 0)} />
 			    <img id="nav-outer-knob" src="img/radio/radio-outer-knob.svg"
-			           onWheel={(e) => "wheeled!"}
+			           onWheel={(e) => this.knobScrolled()}
 			           onClick={(e) => "clicked!"}
-			           onWheel={(e) => "wheeled!"} />
+			           onWheel={(e) => this.knobScrolled()} />
 
 			    <img id="nav-button" src="img/radio/radio-nav-button.svg"
 			           onClick={(e) => console.log("clicked!")} />
@@ -66,4 +70,4 @@ class DualCourseDeviationIndicator extends Component {
 	}
 }
 
-export default DualCourseDeviationIndicator;
+export default Radio;
