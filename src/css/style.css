@@ -1,4 +1,6 @@
-
+body {
+	background-color: #111;
+}
 
 img.panel-background {
 	z-index: -1;

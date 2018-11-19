@@ -21,7 +21,7 @@ class Altimeter extends Component {
 
 	render() {
 		if (this.state.jqueryObj != null) {
-			this.state.jqueryObj.setAltitude(this.props.altimeter);
+			this.state.jqueryObj.setAltitude(this.props.altitude);
 			this.state.jqueryObj.setPressure(this.props.baro, false);
 		}
 		return <div id="altimeter" className="instrument" />
