@@ -26,11 +26,11 @@ class SingleCourseDeviationIndicator extends Component {
 
 				<img id="needle" 
 					 src="img/single-axis-vor/single-axis-vor-vert-needle.svg"
-					 style={rotate(linmapConstrain(4, -4, this.props.horizNeedleDeflection, -24.5, 24.5), "deg")} />
+					 style={rotate(linmapConstrain(2.5, -2.5, this.props.vertNeedleDeflection, -24.5, 24.5), "deg")} />
 
 				<img id="ring" 
 					 src="img/single-axis-vor/single-axis-vor-ring.svg"
-					 style={rotate(this.props.obsSetting, "deg")} />
+					 style={rotate(-this.props.obsSetting, "deg")} />
 
 				<img id="base" 
 					 src="img/single-axis-vor/single-axis-vor-base.svg" />

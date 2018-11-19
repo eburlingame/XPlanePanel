@@ -1,5 +1,6 @@
 body {
 	background-color: #111;
+	overflow: hidden;
 }
 
 img.panel-background {
@@ -20,10 +21,10 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 159px;
-	height: 159px;
-	top: 249px;
-	left: 182px;
+	width: 280px;
+	height: 280px;
+	top: 410px;
+	left: 770px;
 	z-index: 1;
 }
 
@@ -46,18 +47,17 @@ div.instrument {
 }
 
 #heading-indicator>#calib-knob {
-	top: 141.5px;
-	left: 6.8px;
-	width: 18px;
+	top: 89%;
+	left: 5%;
+	width: 11%;
 	z-index: 5;
 }
 
 #heading-indicator>#bug-knob {
 	z-index: 6;
-	top: 141.1px;
-	left: 134.5px;
-	width: 18px;
-	z-index: 5;
+	top: 89%;
+	left: 85%;
+	width: 11%;
 }
 
 #audio-panel {
@@ -79,28 +79,28 @@ div.instrument {
 }
 
 #airspeed {
-	top: 54px;
-	left: -5px;
+	top: 10px;
+	left: 400px;
 }
 
 #attitude {
-	top: 54px;
-	left: 163px;
+	top: 10px;
+	left: 735px;
 }
 
 #altimeter {
-	top: 54px;
-	left: 330px;
+	top: 10px;
+	left: 1070px;
 }
 
 #turn_coordinator {
-	top: 230px;
-	left: -5px;
+	top: 375px;
+	left: 400px;
 }
 
 #variometer {
-	top: 230px;
-	left: 325px;
+	top: 375px;
+	left: 1070px;
 }
 
 #flap-control {
@@ -134,10 +134,10 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 160px;
-	height: 160px;
-	top: 450px;
-	left: 350px;
+	width: 280px;
+	height: 280px;
+	top: 750px;
+	left: 1105px;
 }
 
 #tachometer>img {
@@ -206,10 +206,10 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 160px;
-	height: 160px;
-	top: 460px;
-	left: 550px;
+	width: 280px;
+	height: 280px;
+	top: 750px;
+	left: 1505px;
 }
 
 #adf>img {
@@ -235,10 +235,10 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 160px;
-	height: 160px;
-	top: 255px;
-	left: 540px;
+	width: 280px;
+	height: 280px;
+	top: 410px;
+	left: 1505px;
 }
 
 #single-axis-vor>img {
@@ -277,10 +277,10 @@ div.instrument {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 160px;
-	height: 160px;
-	top: 68px;
-	left: 540px;
+	width: 280px;
+	height: 280px;
+	top: 45px;
+	left: 1505px;
 }
 
 #two-axis-vor>img {

@@ -20,7 +20,7 @@ class AutomaticDirectionFinder extends Component {
 
 				<img id="ring" 
 					 src="img/adf/adf-ring.svg"
-					 style={rotate(this.props.ringRotation, "deg")} />
+					 style={rotate(-this.props.ringRotation, "deg")} />
 
 				<img id="base" 
 					 src="img/adf/adf-base.svg" />

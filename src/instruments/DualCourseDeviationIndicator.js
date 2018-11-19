@@ -30,7 +30,7 @@ class DualCourseDeviationIndicator extends Component {
 
 				<img id="vert-needle" 
 					 src="img/two-axis-vor/two-axis-vor-vert-needle.svg"
-					 style={rotate(linmapConstrain(10, -10, this.props.vertNeedleDeflection, -34, 34), "deg")} />
+					 style={rotate(linmapConstrain(2.5, -2.5, this.props.vertNeedleDeflection, -34, 34), "deg")} />
 
 				<img id="horiz-needle" 
 					 src="img/two-axis-vor/two-axis-vor-horiz-needle.svg"
@@ -38,7 +38,7 @@ class DualCourseDeviationIndicator extends Component {
 
 				<img id="ring" 
 					 src="img/two-axis-vor/two-axis-vor-ring.svg"
-					 style={rotate(this.props.obsSetting, "deg")} />
+					 style={rotate(-this.props.obsSetting, "deg")} />
 
 				<img id="base" 
 					 src="img/two-axis-vor/two-axis-vor-base.svg" />

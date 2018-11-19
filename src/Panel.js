@@ -18,6 +18,11 @@ import WarningLights from './instruments/WarningLights';
 import AudioPanel from './instruments/AudioPanel';
 
 const REF_FLOAT = "float";
+const REF_INT = "int";
+
+const NAV_FROM = 2;
+const NAV_TO = 1;
+
 const WS_URL = "ws://localhost:9002/";
 const XPLANE_FIELDS = [
 	{
@@ -73,7 +78,60 @@ const XPLANE_FIELDS = [
 		"dataref": "sim/cockpit2/engine/indicators/engine_speed_rpm",
 		"type": REF_FLOAT, 
 		"refresh": 10
-
+	},
+	{
+		"field": "nav1_obs", 
+		"dataref": "sim/cockpit/radios/nav1_obs_degm",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "nav2_obs", 
+		"dataref": "sim/cockpit/radios/nav2_obs_degm",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "adf1_card", 
+		"dataref": "sim/cockpit/radios/adf1_cardinal_dir",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "adf1_bearing", 
+		"dataref": "sim/cockpit/radios/adf1_dir_degt",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "hdg_bug", 
+		"dataref": "sim/cockpit/autopilot/heading_mag",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "nav1_dots", 
+		"dataref": "sim/cockpit/radios/nav1_hdef_dot",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "nav1_fromto", 
+		"dataref": "sim/cockpit/radios/nav1_fromto",
+		"type": REF_INT, 
+		"refresh": 10
+	},
+	{
+		"field": "nav2_dots", 
+		"dataref": "sim/cockpit/radios/nav2_hdef_dot",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "nav2_fromto", 
+		"dataref": "sim/cockpit/radios/nav2_fromto",
+		"type": REF_INT, 
+		"refresh": 10
 	}
 ];
 
@@ -145,28 +203,28 @@ class Panel extends Component {
 		        <Altimeter altitude={ this.state['alt'] } />
 
 		        <TurnCoordinator turn={ this.state['roll_rate'] } 
-		        			     slip={ this.state['slip'] } />
+		        			     slip={ .5 - this.state['slip'] * 0.08 } />
 
 		        <HeadingIndicator heading={ this.state['hdg'] } 
-		        	      		  headingBug={320} />
+		        	      		  headingBug={ this.state['hdg_bug'] } />
 
 		        <VerticalSpeedIndicator verticalSpeed={ this.state['vertspd'] / 100 } />
 
 		        <DualCourseDeviationIndicator 
-		          toFromAmt={0}
+		          toFromAmt={ this.state['nav1_fromto'] == NAV_FROM ? -1 : 1 }
 		          warnAmt={0}
-		          vertNeedleDeflection={0}
+		          vertNeedleDeflection={ this.state['nav1_dots'] }
 		          horizNeedleDeflection={0}
-		          obsSetting={0} />
+		          obsSetting={ this.state['nav1_obs'] } />
 
 		        <SingleCourseDeviationIndicator 
-		          toFromAmt={0}
-		          vertNeedleDeflection={0}
-		          obsSetting={0} />
+		          toFromAmt={ this.state['nav2_fromto'] == NAV_FROM ? -1 : 1 }
+		          vertNeedleDeflection={ this.state['nav2_dots'] }
+		          obsSetting={ this.state['nav2_obs'] } />
 
 		        <AutomaticDirectionFinder 
-		          stationBearing={50}
-		          ringRotation={20} />
+		          stationBearing={ this.state['adf1_bearing'] }
+		          ringRotation={this.state['adf1_card']} />
 
 		        <Tachometer rpm={ this.state['rpm'] } />
 			</div>
