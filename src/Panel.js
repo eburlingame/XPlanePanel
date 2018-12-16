@@ -18,6 +18,7 @@ import WarningLights from './instruments/WarningLights';
 import AudioPanel from './instruments/AudioPanel';
 
 const REF_FLOAT = "float";
+const REF_FLOAT_ARRAY = "float_array"
 const REF_INT = "int";
 
 const NAV_FROM = 2;
@@ -76,7 +77,7 @@ const XPLANE_FIELDS = [
 	{
 		"field": "rpm", 
 		"dataref": "sim/cockpit2/engine/indicators/engine_speed_rpm",
-		"type": REF_FLOAT, 
+		"type": REF_FLOAT_ARRAY, 
 		"refresh": 10
 	},
 	{
@@ -226,7 +227,7 @@ class Panel extends Component {
 		          stationBearing={ this.state['adf1_bearing'] }
 		          ringRotation={this.state['adf1_card']} />
 
-		        <Tachometer rpm={ this.state['rpm'] } />
+		        <Tachometer rpm={ this.state['rpm'][0] } />
 			</div>
 		);
 	}
