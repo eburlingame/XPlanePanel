@@ -17,6 +17,12 @@ div.instrument {
 	overflow: initial;
 }
 
+div.instrument>img {
+	position: absolute;
+	display: block;
+	overflow: initial;
+}
+
 #heading-indicator {
 	position: absolute;
 	display: block;
@@ -333,283 +339,40 @@ div.instrument {
 	src: url("../fonts/digital-7.monoitalic.ttf");
 }
 
-
-.radio {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 320px;
-	z-index: 0;
+.eng-instrument {
+	width: 187px;
+	height: 187px;
 }
 
-#radio1 {
-	top: 110px;
-	left: 750px;
-}
-
-#radio2 {
-	top: 226px;
-	left: 750px;
-}
-
-.radio>.frequency {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	font-size: 22px;
-	font-family: "Digital7";
-	color: #f7931dff;
-	z-index: 2;
-}
-
-.radio>#comm-active-frequency {
-	left: 6px;
-	top: 18px;
-}
-
-.radio>#comm-stby-frequency {
-	left: 80px;
-	top: 18px;
-}
-
-.radio>#nav-active-frequency {
-	left: 160px;
-	top: 18px;
-}
-
-.radio>#nav-stby-frequency {
-	left: 235px;
-	top: 18px;
-}
-
-
-.radio>img {
-	position: absolute;
-	display: block;
-	overflow: initial;
-}
-
-.radio>#base {
-	z-index: 0;
-	pointer-events: none;
-}
-
-.radio>#outer-knob {
+.base {
 	z-index: 1;
 }
 
-.radio>#inner-knob {
+.middle {
 	z-index: 2;
 }
 
-.radio>#comm-button {
-	z-index: 5;
-	top: 65px;
-	left: 65px;
-	width: 17px;
-}
-
-.radio>#nav-button {
-	z-index: 5;
-	top: 65px;
-	left: 220px;
-	width: 17px;
-}
-
-.radio>#comm-volume-knob {
-	z-index: 5;
-	top: 75px;
-	left: 35px;
-	width: 20px;
-}
-
-.radio>#nav-volume-knob {
-	z-index: 5;
-	top: 75px;
-	left: 195px;
-	width: 20px;
-}
-
-.radio>#comm-inner-knob {
-	z-index: 5;
-	top: 65px;
-	left: 128px;
-	width: 20px;
-}
-
-.radio>#comm-outer-knob {
-	z-index: 4;
-	top: 57px;
-	left: 120px;
-	width: 36px;
-}
-
-
-.radio>#nav-inner-knob {
-	z-index: 5;
-	top: 65px;
-	left: 273px;
-	width: 20px;
-}
-
-.radio>#nav-outer-knob {
-	z-index: 4;
-	top: 57px;
-	left: 265px;
-	width: 36px;
-}
-
-#kap140 {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 322px;
-	height: 100px;
-	top: 340px;
-	left: 760px;
-}
-
-#kap140>img {
-	position: absolute;
-	display: block;
-	overflow: initial;
-}
-
-#kap140>base {
- 	z-index: 1;
-}
-
-#kap140>.lcd{
-	z-index: 2;
-	border: none;
-	margin: none;
-	padding: none;
-}
-
-#kap140>.button {
- 	z-index: 2;
-	width: 5.4%;
-}
-
-#kap140>#nav-button {
-	top: 63.3%;
-	left: 32.5%;
-}
-
-#kap140>#ap-button {
-	top: 63.3%;
-	left: 3.6%;
-}
-
-#kap140>#apr-button {
-	top: 63.3%;
-	left: 44.2%;
-}
-
-#kap140>#arm-button {
-	top: 8.4%;
-	left: 80.4%;
-}
-
-#kap140>#baro-button {
-	top: 8.4%;
-	left: 90.3%;
-}
-
-#kap140>#alt-button {
-	top: 63.3%;
-	left: 65.4%;
-}
-
-#kap140>#rev-button {
-	top: 63.3%;
-	left: 55.4%;
-}
-
-#kap140>#up-button {
-	top: 35%;
-	left: 74.2%;
-}
-
-#kap140>#dn-button {
-	top: 60.4%;
-	left: 74.2%;
-}
-
-#kap140>#hdg-button {
-	top: 63.3%;
-	left: 21%;
-}
-
-#kap140>#inner-knob {
-	width: 7%;
-	left: 86%;
-	top: 42.5%;
+.top {
 	z-index: 3;
 }
 
-#kap140>#outer-knob {
-	width: 13%;
-	z-index: 2;
-	left: 83%;
-	top: 33%;
+#egt-fuel-flow {
+	top: 430px;
+	left: 220px;
 }
 
-#kap140>.active-indicator {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	font-size: 20px;
-	font-family: "Digital7-italic";
-	color: #f7931dff;
-	z-index: 2;
+#fuel-quantity {
+	top: 430px;
+	left: 10px;
 }
 
-#kap140>.armed-indicator {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	font-size: 20px;
-	font-family: "Digital7";
-	color: #f7931dff;
-	z-index: 2;
+#temp-press {
+	top: 650px;
+	left: 10px;
 }
 
-#kap140>#active-indicator-left {
-	left: 16.6%;
-	top: 10%;
+#vac-amp {
+	top: 650px;
+	left: 220px;
 }
-
-#kap140>#armed-indicator-left {
-	left: 16.5%;
-	top: 26%;
-}
-
-#kap140>#active-indicator-right {
-	left: 35.6%;
-	top: 10%;
-}
-
-#kap140>#armed-indicator-right {
-	left: 35.5%;
-	top: 26%;
-}
-
-#kap140>#altitude {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	font-size: 21px;
-	font-family: "Digital7-italic";
-	color: #f7931dff;
-	z-index: 2;
-	left: 51.2%;
-	top: 11%;
-}
-
-#kap140>#altitude>#comma {
-	font-family: "Digital7";
-	font-stretch: ultra-condensed;
-}
-
 

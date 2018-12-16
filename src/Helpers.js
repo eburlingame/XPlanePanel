@@ -37,3 +37,10 @@ export function linmapConstrain(
 export function rotate(value, units) {
 	return {transform: "rotate(" + value + "" + units + ")"};
 };
+
+export function rotate_around(value, units, x, y) {
+	return {
+		...rotate(value, units),
+		transformOrigin: x + "% " + y + "%"
+	};
+};

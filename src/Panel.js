@@ -17,6 +17,11 @@ import PanelBackground from './instruments/PanelBackground';
 import WarningLights from './instruments/WarningLights';
 import AudioPanel from './instruments/AudioPanel';
 
+import EGTFuelFlow from './instruments/EGTFuelFlow';
+import FuelQuantity from './instruments/FuelQuantity';
+import OilTempPress from './instruments/OilTempPress';
+import VacAmp from './instruments/VacAmp';
+
 const REF_FLOAT = "float";
 const REF_FLOAT_ARRAY = "float_array"
 const REF_INT = "int";
@@ -228,6 +233,11 @@ class Panel extends Component {
 		          ringRotation={this.state['adf1_card']} />
 
 		        <Tachometer rpm={ this.state['rpm'][0] } />
+
+		        <EGTFuelFlow />
+		        <FuelQuantity />
+		        <OilTempPress />
+		        <VacAmp />
 			</div>
 		);
 	}
