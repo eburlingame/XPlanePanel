@@ -27,10 +27,10 @@ div.instrument>img {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 280px;
-	height: 280px;
-	top: 410px;
-	left: 770px;
+	width: 305px;
+	height: 305px;
+	top: 385px;
+	left: 903px;
 	z-index: 1;
 }
 
@@ -66,84 +66,39 @@ div.instrument>img {
 	width: 11%;
 }
 
-#audio-panel {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 320px;
-	top: 10px;
-	left: 750px;
-}
-
-#warning-lights {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 260px;
-	top: 28px;
-	left: 210px;
-}
-
 #airspeed {
-	top: 10px;
-	left: 400px;
+	top: -25px;
+	left: 512px;
 }
 
 #attitude {
-	top: 10px;
-	left: 735px;
+	top: -25px;
+	left: 868px;
 }
 
 #altimeter {
-	top: 10px;
-	left: 1070px;
+	top: -25px;
+	left: 1222px;
 }
 
 #turn_coordinator {
-	top: 375px;
-	left: 400px;
+	top: 350px;
+	left: 512px;
 }
 
 #variometer {
-	top: 375px;
-	left: 1070px;
+	top: 350px;
+	left: 1218px;
 }
-
-#flap-control {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 110px;
-	top: 650px;
-	left: 960px;
-}
-
-#flap-control>img {
-	position: absolute;
-	width: 100%;
-}
-
-#flap-control>#background {
-	z-index: 0;
-}
-
-#flap-control>#indicator {
-	z-index: 1;
-}
-
-#flap-control>#lever{
-	z-index: 2;
-}
-
 
 #tachometer {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 280px;
-	height: 280px;
-	top: 750px;
-	left: 1105px;
+	width: 305px;
+	height: 305px;
+	top: 770px;
+	left: 1255px;
 }
 
 #tachometer>img {
@@ -168,54 +123,14 @@ div.instrument>img {
 	left: 450px;
 }
 
-#throttle>img {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 180px;
-	height: 180px;
-}
-
-#throttle>#base {
-	z-index: 1;
-}
-
-#throttle>#handle {
-	z-index: 2;
-}
-
-#mixture {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	top: 650px;
-	left: 590px;
-}
-
-#mixture>img {
-	position: absolute;
-	display: block;
-	overflow: initial;
-	width: 180px;
-	height: 180px;
-}
-
-#mixture>#base {
-	z-index: 1;
-}
-
-#mixture>#handle {
-	z-index: 2;
-}
-
 #adf {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 280px;
-	height: 280px;
-	top: 750px;
-	left: 1505px;
+	width: 305px;
+	height: 305px;
+	top: 765px;
+	left: 1605px;
 }
 
 #adf>img {
@@ -241,10 +156,10 @@ div.instrument>img {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 280px;
-	height: 280px;
-	top: 410px;
-	left: 1505px;
+	width: 305px;
+	height: 305px;
+	top: 390px;
+	left: 1605px;
 }
 
 #single-axis-vor>img {
@@ -283,10 +198,10 @@ div.instrument>img {
 	position: absolute;
 	display: block;
 	overflow: initial;
-	width: 280px;
-	height: 280px;
-	top: 45px;
-	left: 1505px;
+	width: 305px;
+	height: 305px;
+	top: 15px;
+	left: 1605px;
 }
 
 #two-axis-vor>img {
@@ -329,19 +244,9 @@ div.instrument>img {
 	z-index: 6;
 }
 
-@font-face {
-	font-family: "Digital7";
-	src: url("../fonts/digital-7.mono.ttf");
-}
-
-@font-face {
-	font-family: "Digital7-italic";
-	src: url("../fonts/digital-7.monoitalic.ttf");
-}
-
 .eng-instrument {
-	width: 187px;
-	height: 187px;
+	width: 200px;
+	height: 200px;
 }
 
 .base {
@@ -357,22 +262,22 @@ div.instrument>img {
 }
 
 #egt-fuel-flow {
-	top: 430px;
-	left: 220px;
+	top: 395px;
+	left: 283px;
 }
 
 #fuel-quantity {
-	top: 430px;
-	left: 10px;
+	top: 395px;
+	left: 45px;
 }
 
 #temp-press {
-	top: 650px;
-	left: 10px;
+	top: 690px;
+	left: 45px;
 }
 
 #vac-amp {
-	top: 650px;
-	left: 220px;
+	top: 690px;
+	left: 283px;
 }
 

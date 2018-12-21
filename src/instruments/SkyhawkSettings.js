@@ -1,6 +1,6 @@
 const settings = {
 	off_flag: true,
-    size: 350,
+    size: 380,
     showBox: true,
     showScrews: true,
     ils: false,
