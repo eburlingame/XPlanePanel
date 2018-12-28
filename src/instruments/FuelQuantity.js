@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {linmap, rotate_around, rotate} from '../Helpers';
+import {linmapConstrain, rotate_around, rotate} from '../Helpers';
 
-var i = 0; 
 class FuelQuantity extends Component {
 
   	constructor(props) {
@@ -9,7 +8,6 @@ class FuelQuantity extends Component {
 	}
 
 	render() {
-		i += 1;
 		return (
 			<div id="fuel-quantity" className="instrument eng-instrument">
 
@@ -18,11 +16,11 @@ class FuelQuantity extends Component {
 
 				<img className="middle" 
 					 src="img/eng-instruments/eng-left-needle.svg" 
-					 style={rotate_around(Math.sin(i/20) * 67, "deg", 25, 50)}/>
+					 style={rotate_around(linmapConstrain(0, 26, this.props.fuel_qty_left, -1, .82) * -67, "deg", 25, 50)}/>
 
 				<img className="middle" 
 					 src="img/eng-instruments/eng-right-needle.svg" 
-					 style={rotate_around(Math.sin(i/20) * 67, "deg", 75, 50)}/>
+					 style={rotate_around(linmapConstrain(0, 26, this.props.fuel_qty_right, -1, .89) * 67, "deg", 75, 50)}/>
 
        			 <img className="base"
  					  src="img/eng-instruments/fuel-quantity/fuel-quantity-base.svg" />

@@ -29,6 +29,9 @@ const REF_INT = "int";
 const NAV_FROM = 2;
 const NAV_TO = 1;
 
+const GAL_PER_KG = 1 / 2.8;
+const SEC_PER_HOUR = 60 * 60;
+
 const WS_URL = "ws://localhost:9002/";
 const XPLANE_FIELDS = [
 	{
@@ -70,6 +73,12 @@ const XPLANE_FIELDS = [
 	{
 		"field": "alt", 
 		"dataref": "sim/cockpit2/gauges/indicators/altitude_ft_pilot",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "baro", 
+		"dataref": "sim/cockpit/misc/barometer_setting",
 		"type": REF_FLOAT, 
 		"refresh": 10
 	},
@@ -137,6 +146,49 @@ const XPLANE_FIELDS = [
 		"field": "nav2_fromto", 
 		"dataref": "sim/cockpit/radios/nav2_fromto",
 		"type": REF_INT, 
+		"refresh": 10
+	},
+
+	{
+		"field": "fuel_quantity", 
+		"dataref": "sim/cockpit2/fuel/fuel_quantity",
+		"type": REF_FLOAT_ARRAY, 
+		"refresh": 10
+	},
+	{
+		"field": "egt", 
+		"dataref": "sim/flightmodel/engine/ENGN_EGT_c",
+		"type": REF_FLOAT_ARRAY, 
+		"refresh": 10
+	},
+	{
+		"field": "fuel_flow", 
+		"dataref": "sim/cockpit2/engine/indicators/fuel_flow_kg_sec",
+		"type": REF_FLOAT_ARRAY, 
+		"refresh": 10
+	},
+	{
+		"field": "oil_temp", 
+		"dataref": "sim/flightmodel/engine/ENGN_oil_temp_c",
+		"type": REF_FLOAT_ARRAY, 
+		"refresh": 10
+	},
+	{
+		"field": "oil_press", 
+		"dataref": "sim/flightmodel/engine/ENGN_oil_press_psi",
+		"type": REF_FLOAT_ARRAY, 
+		"refresh": 10
+	},
+	{
+		"field": "vacuum", 
+		"dataref": "sim/cockpit/misc/vacuum",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
+		"field": "amps", 
+		"dataref": "sim/cockpit2/electrical/battery_amps",
+		"type": REF_FLOAT_ARRAY, 
 		"refresh": 10
 	}
 ];
@@ -206,7 +258,8 @@ class Panel extends Component {
 		        				   pitch={ this.state['pitch'] } 
 		        				   offFlag={false}/>
 
-		        <Altimeter altitude={ this.state['alt'] } />
+		        <Altimeter altitude={ this.state['alt'] }
+		        		   baro={ this.state['baro'] } />
 
 		        <TurnCoordinator turn={ this.state['roll_rate'] } 
 		        			     slip={ .5 - this.state['slip'] * 0.08 } />
@@ -234,10 +287,14 @@ class Panel extends Component {
 
 		        <Tachometer rpm={ this.state['rpm'][0] } />
 
-		        <EGTFuelFlow />
-		        <FuelQuantity />
-		        <OilTempPress />
-		        <VacAmp />
+		        <FuelQuantity fuel_qty_left={this.state['fuel_quantity'][0] * GAL_PER_KG}
+		        			  fuel_qty_right={this.state['fuel_quantity'][1] * GAL_PER_KG} />
+		        <EGTFuelFlow egt={this.state['egt'][0]}
+		        			 fuel_flow={this.state['fuel_flow'][0] * GAL_PER_KG * SEC_PER_HOUR} />
+		        <OilTempPress oilTemp={this.state['oil_temp'][0]} 
+		        			  oilPress={this.state['oil_press'][0]} />
+		        <VacAmp vacuum={this.state['vacuum']} 
+		        		amps={this.state['amps'][0]} />
 			</div>
 		);
 	}
