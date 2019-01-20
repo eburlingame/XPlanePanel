@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {linmap, linmapConstrain, rotate} from '../Helpers';
 
+const NAV_FROM = 2;
+const NAV_TO = 1;
+
 class SingleCourseDeviationIndicator extends Component {
 
   	constructor(props) {
@@ -17,12 +20,20 @@ class SingleCourseDeviationIndicator extends Component {
 				<img id="arrow" 
 					 src="img/single-axis-vor/single-axis-vor-arrow.svg" />
 
-				<img id="nav-mask" 
-					 src="img/single-axis-vor/single-axis-vor-nav-mask.svg" />
+				{this.props.navFlag == NAV_FROM &&
+					<img id="nav-flag" 
+						 src="img/single-axis-vor/single-axis-vor-nav-flag-from.svg" />
+			      }
 
-				<img id="nav-flag" 
-					 src="img/single-axis-vor/single-axis-vor-nav-flag.svg"
-					 style={{top: linmapConstrain(-1, 1, this.props.toFromAmt, -2.4, 2.4)}} />
+  				{this.props.navFlag == 0 &&
+					<img id="nav-flag" 
+						 src="img/single-axis-vor/single-axis-vor-nav-flag-off.svg" />
+			      }
+
+				{this.props.navFlag == NAV_TO &&
+					<img id="nav-flag" 
+						 src="img/single-axis-vor/single-axis-vor-nav-flag-to.svg" />
+			      }
 
 				<img id="needle" 
 					 src="img/single-axis-vor/single-axis-vor-vert-needle.svg"

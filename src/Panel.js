@@ -26,9 +26,6 @@ const REF_FLOAT = "float";
 const REF_FLOAT_ARRAY = "float_array"
 const REF_INT = "int";
 
-const NAV_FROM = 2;
-const NAV_TO = 1;
-
 const GAL_PER_KG = 1 / 2.8;
 const SEC_PER_HOUR = 60 * 60;
 
@@ -131,10 +128,22 @@ const XPLANE_FIELDS = [
 		"refresh": 10
 	},
 	{
+		"field": "nav1_vdots", 
+		"dataref": "sim/cockpit/radios/nav1_vdef_dot",
+		"type": REF_FLOAT, 
+		"refresh": 10
+	},
+	{
 		"field": "nav1_fromto", 
 		"dataref": "sim/cockpit/radios/nav1_fromto",
 		"type": REF_INT, 
 		"refresh": 10
+	},
+	{
+		"field": "nav1_gs", 
+		"dataref": "sim/cockpit2/radios/indicators/nav1_flag_glideslope",
+		"type": REF_INT, 
+		"refresh": 400
 	},
 	{
 		"field": "nav2_dots", 
@@ -146,7 +155,7 @@ const XPLANE_FIELDS = [
 		"field": "nav2_fromto", 
 		"dataref": "sim/cockpit/radios/nav2_fromto",
 		"type": REF_INT, 
-		"refresh": 10
+		"refresh": 400
 	},
 
 	{
@@ -270,14 +279,14 @@ class Panel extends Component {
 		        <VerticalSpeedIndicator verticalSpeed={ this.state['vertspd'] / 100 } />
 
 		        <DualCourseDeviationIndicator 
-		          toFromAmt={ this.state['nav1_fromto'] == NAV_FROM ? -1 : 1 }
-		          warnAmt={0}
+		          navFlag={ this.state['nav1_fromto'] }
+		          gsFlag={ this.state['nav1_gs'] }
 		          vertNeedleDeflection={ this.state['nav1_dots'] }
-		          horizNeedleDeflection={0}
+		          horizNeedleDeflection={ this.state['nav1_vdots'] }
 		          obsSetting={ this.state['nav1_obs'] } />
 
 		        <SingleCourseDeviationIndicator 
-		          toFromAmt={ this.state['nav2_fromto'] == NAV_FROM ? -1 : 1 }
+		          navFlag={ this.state['nav2_fromto'] }
 		          vertNeedleDeflection={ this.state['nav2_dots'] }
 		          obsSetting={ this.state['nav2_obs'] } />
 

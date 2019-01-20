@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {linmap, linmapConstrain, rotate} from '../Helpers';
 
+const NAV_FROM = 2;
+const NAV_TO = 1;
+
 class DualCourseDeviationIndicator extends Component {
 
   	constructor(props) {
@@ -9,24 +12,35 @@ class DualCourseDeviationIndicator extends Component {
 
 	render() {
 		return (
-			<div id="two-axis-vor" className="instrument"
-				 onWheel={(e) => console.log("wheeled")}
-				 onClick={(e) => console.log("clicked")}
-				 onContextMenu={(e) => console.log("right clicked")} >
+			<div id="two-axis-vor" className="instrument">
 
 				<img id="arrow" 
 					 src="img/two-axis-vor/two-axis-vor-arrow.svg" />
 
-				<img id="masks" 
-					 src="img/two-axis-vor/two-axis-vor-masks.svg" />
+				{this.props.navFlag == NAV_FROM &&
+					<img id="nav-flag" 
+						 src="img/two-axis-vor/two-axis-vor-nav-flag-from.svg" />
+			      }
 
-				<img id="nav-flag" 
-					 src="img/two-axis-vor/two-axis-vor-nav-flag.svg"
-					 style={{top: linmapConstrain(-1, 1, this.props.toFromAmt, -2.4, 2.4)}} />
+  				{this.props.navFlag == 0 &&
+					<img id="nav-flag" 
+						 src="img/two-axis-vor/two-axis-vor-nav-flag-off.svg" />
+			      }
 
-				<img id="gs-flag" 
-					 src="img/two-axis-vor/two-axis-vor-gs-flag.svg"
-					 style={{top: linmapConstrain(1, 0, this.props.warnAmt, 0, 2.4)}} />
+				{this.props.navFlag == NAV_TO &&
+					<img id="nav-flag" 
+						 src="img/two-axis-vor/two-axis-vor-nav-flag-to.svg" />
+			      }
+
+				{this.props.gsFlag == 0 &&
+    				<img id="gs-flag" 
+						 src="img/two-axis-vor/two-axis-vor-gs-flag-on.svg" />
+			      }
+
+  				{this.props.gsFlag == 1 &&
+    				<img id="gs-flag" 
+						 src="img/two-axis-vor/two-axis-vor-gs-flag-off.svg" />
+			      }
 
 				<img id="vert-needle" 
 					 src="img/two-axis-vor/two-axis-vor-vert-needle.svg"
@@ -34,7 +48,7 @@ class DualCourseDeviationIndicator extends Component {
 
 				<img id="horiz-needle" 
 					 src="img/two-axis-vor/two-axis-vor-horiz-needle.svg"
-					 style={rotate(linmapConstrain(4, -4, this.props.horizNeedleDeflection, -24.5, 24.5), "deg")} />
+					 style={rotate(linmapConstrain(-.9, .9, this.props.horizNeedleDeflection, -24, 24), "deg")} />
 
 				<img id="ring" 
 					 src="img/two-axis-vor/two-axis-vor-ring.svg"
