@@ -107,13 +107,13 @@ const XPLANE_FIELDS = [
 		"field": "adf1_card", 
 		"dataref": "sim/cockpit/radios/adf1_cardinal_dir",
 		"type": REF_FLOAT, 
-		"refresh": 10
+		"refresh": 1000
 	},
 	{
 		"field": "adf1_bearing", 
 		"dataref": "sim/cockpit/radios/adf1_dir_degt",
 		"type": REF_FLOAT, 
-		"refresh": 10
+		"refresh": 1000
 	},
 	{
 		"field": "hdg_bug", 
@@ -162,43 +162,43 @@ const XPLANE_FIELDS = [
 		"field": "fuel_quantity", 
 		"dataref": "sim/cockpit2/fuel/fuel_quantity",
 		"type": REF_FLOAT_ARRAY, 
-		"refresh": 10
+		"refresh": 700
 	},
 	{
 		"field": "egt", 
 		"dataref": "sim/flightmodel/engine/ENGN_EGT_c",
 		"type": REF_FLOAT_ARRAY, 
-		"refresh": 10
+		"refresh": 700
 	},
 	{
 		"field": "fuel_flow", 
 		"dataref": "sim/cockpit2/engine/indicators/fuel_flow_kg_sec",
 		"type": REF_FLOAT_ARRAY, 
-		"refresh": 10
+		"refresh": 700
 	},
 	{
 		"field": "oil_temp", 
 		"dataref": "sim/flightmodel/engine/ENGN_oil_temp_c",
 		"type": REF_FLOAT_ARRAY, 
-		"refresh": 10
+		"refresh": 700
 	},
 	{
 		"field": "oil_press", 
 		"dataref": "sim/flightmodel/engine/ENGN_oil_press_psi",
 		"type": REF_FLOAT_ARRAY, 
-		"refresh": 10
+		"refresh": 700
 	},
 	{
 		"field": "vacuum", 
 		"dataref": "sim/cockpit/misc/vacuum",
 		"type": REF_FLOAT, 
-		"refresh": 10
+		"refresh": 700
 	},
 	{
 		"field": "amps", 
 		"dataref": "sim/cockpit2/electrical/battery_amps",
 		"type": REF_FLOAT_ARRAY, 
-		"refresh": 10
+		"refresh": 700
 	}
 ];
 
